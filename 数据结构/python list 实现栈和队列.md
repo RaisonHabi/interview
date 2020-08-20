@@ -70,6 +70,11 @@ print("取一个元素：",queue.pop())
 ```
 
 这里介绍一个相对更高效的方法，即使用标准库的 **collections 模块中的 deque 结构体，它被设计成在两端存入和读取都很快的特殊 list，可以用来实现栈和队列的功能**。
+```
+import collections
+d=collections.deque()
+```
+
 
 从上面的图可以看出，**用list直接实现队列和用collections.deque实现在10万级别的数据上有接近100倍的差距**。
 ```
